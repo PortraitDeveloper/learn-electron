@@ -1,0 +1,31 @@
+{
+  "name": "todolist-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  },
+  "build": {
+    "appId": "electron-chronicle-1.0.0",
+    "win": {
+      "target": "nsis"
+    },
+    "extraResources": [
+      {
+        "from": "./db",
+        "to": "./db"
+      }
+    ]
+  }
+}
